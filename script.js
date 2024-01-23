@@ -65,64 +65,56 @@ let   menu1 = document.getElementById('menu');
 let    back = document.getElementById('back');
 let item = document.getElementsByClassName('menu-item');
 let teste = 0 
-
-let nav = document.getElementsByClassName('nav-list');
-
 function fundo(){
-
-    
-  console.log(teste)
-  if(window.screen.width < 1200) { // aqui você define o tamanho pra mobile
-    if(teste >=1){
-  
-  
-        teste-=1
-        menu.style.paddingLeft = "290px";    
-  
-  
-        menu1.addEventListener('click', function(){ back.style.display = 'none' });
-        back.addEventListener('click', function(){ back.style.display = 'none' });
-     
-   
+    if(window.screen.width < 1200) { // aqui você define o tamanho pra mobile
+        if(teste >=1){
+        
+        
+            teste-=1
       
-      
-      
-    }
-    else{
-        menu.style.paddingLeft = "90px"
-   
-        teste = teste+1
-  
-        for (var i = 0; i < item.length; i++) {
-            item[i].addEventListener('click', function(){ back.style.display = 'none'});
+            menu.style.paddingLeft = "290px"
+                 
+            menu1.addEventListener('click', function(){ back.style.display = 'none' });
+            back.addEventListener('click', function(){ back.style.display = 'none' });
+         
+          
         }
-        menu1.addEventListener('click', function(){ back.style.display = 'block' });
-        back.addEventListener('click', function(){ back.style.display = 'none' });
-     
+        else{
+            menu.style.paddingLeft = "90px"
       
-     
-      
-      
+            teste = teste+1
+            
+         
+            for (var i = 0; i < item.length; i++) {
+                item[i].addEventListener('click', function(){ back.style.display = 'none'});
+            }
+            
+            menu1.addEventListener('click', function(){ back.style.display = 'block' });
+            back.addEventListener('click', function(){ back.style.display = 'none' });
+         
+          
+          
+        }
     }
-   
-}
+    
+
   else if(teste >=1){
       
       
       teste-=1
-      menu.style.paddingLeft = menu.style.fontSize; 
+      menu.style.paddingLeft = menu.style.fontSize;
       menu.style.paddingRight = "0"
-
+      menu.style.transition = "padding-Right 0.8s"; 
            
       menu1.addEventListener('click', function(){ back.style.display = 'none' });
-    
-    
+      back.addEventListener('click', function(){ back.style.display = 'none' });
+   
     
   }
   else{
       menu.style.paddingLeft = "0"
- 
-  
+      menu.style.paddingRight = "100px"
+      console.log("sadsda")
       teste = teste+1
       menu.style.transition = "padding-Right 2s";    
    
@@ -131,12 +123,12 @@ function fundo(){
       }
       
       menu1.addEventListener('click', function(){ back.style.display = 'block' });
-   
+      back.addEventListener('click', function(){ back.style.display = 'none' });
    
     
     
   }
-}   
+} 
 function fonte(e) {
 
     var elemento = $(".text-center");
