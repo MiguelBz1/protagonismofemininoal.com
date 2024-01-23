@@ -70,13 +70,44 @@ function fundo(){
 
     
   console.log(teste)
-  if(teste >=1){
+  if(window.screen.width < 1200) { // aqui você define o tamanho pra mobile
+    if(teste >=1){
+  
+  
+        teste-=1
+        menu.style.paddingLeft = "290px";    
+  
+  
+             
+        menu1.addEventListener('click', function(){ back.style.display = 'none' });
+      
+      
+      
+    }
+    else{
+        menu.style.paddingLeft = "90px"
+   
+        teste = teste+1
+  
+        for (var i = 0; i < item.length; i++) {
+            item[i].addEventListener('click', function(){ back.style.display = 'none'});
+        }
+        
+        menu1.addEventListener('click', function(){ back.style.display = 'block' });
+     
+     
+      
+      
+    }
+   
+}
+  else if(teste >=1){
       
       
       teste-=1
-      menu.style.paddingLeft = menu.style.fontSize;
+      menu.style.paddingLeft = menu.style.fontSize; 
       menu.style.paddingRight = "0"
-      menu.style.transition = "padding-Right 0.8s"; 
+
            
       menu1.addEventListener('click', function(){ back.style.display = 'none' });
     
@@ -85,9 +116,8 @@ function fundo(){
   }
   else{
       menu.style.paddingLeft = "0"
-    
-      menu.style.paddingRight = "150px"
-      console.log("sadsda")
+ 
+  
       teste = teste+1
       menu.style.transition = "padding-Right 2s";    
    
@@ -686,4 +716,16 @@ playerPy1.ontimeupdate = function () {
     let duration = playerPy1.duration;
     prog = Math.floor((ct * 150) / duration);
     progress.style.setProperty("--progress", prog + "%");
+}
+
+
+let mensagem = document.querySelector(".mensagem") ;
+
+// mostra a mensagem
+function showMessage(){   
+   mensagem.style.display = "block";   
+ }
+// esconde a mensagem
+function hideMessage(){
+  mensagem.style.display = "none"; 
 }
