@@ -60,12 +60,14 @@ var swiper = new Swiper(".swiper", {
 
 
 //mobile menu
-let menu = document.getElementById('mobile-menu');
+const menu = document.getElementById('mobile-menu');
 let   menu1 = document.getElementById('menu');
 let    back = document.getElementById('back');
+let item = document.getElementsByClassName('menu-item');
+let teste = 0 
 
 let nav = document.getElementsByClassName('nav-list');
-let teste = 0 
+
 function fundo(){
 
     
@@ -78,8 +80,10 @@ function fundo(){
         menu.style.paddingLeft = "290px";    
   
   
-             
         menu1.addEventListener('click', function(){ back.style.display = 'none' });
+        back.addEventListener('click', function(){ back.style.display = 'none' });
+     
+   
       
       
       
@@ -92,9 +96,10 @@ function fundo(){
         for (var i = 0; i < item.length; i++) {
             item[i].addEventListener('click', function(){ back.style.display = 'none'});
         }
-        
         menu1.addEventListener('click', function(){ back.style.display = 'block' });
+        back.addEventListener('click', function(){ back.style.display = 'none' });
      
+      
      
       
       
