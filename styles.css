@@ -6,7 +6,7 @@ body {
 }
 
 .head-site {
-    background-image: url("Imgs/_CAPA\ REPORT\ \(1\)\ \(1\).png");
+    background-image: url(Imgs/Capa_teste3.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,8 +43,9 @@ body {
 .Afonte {
 
     cursor: pointer;
-    position: fixed;
-    padding-top: 6%;
+   
+   padding-left: 90%;
+   
 
 }
 
@@ -52,7 +53,9 @@ body {
     width: 20px;
     height: 20px;
 }
-
+.img-pr{
+    height: 570px;
+}
 .box-img {
     background-image: url(Wanessa-20240122T203201Z-001/Wanessa/IMG_6324.JPG);
     background-position: center top;
@@ -62,8 +65,16 @@ body {
     padding-top: 60px;
     padding-bottom: 100px;
 }
-
-
+.img-g{
+    height: 500px;
+    
+}
+.img-w{
+    height: 400px;
+}
+.a1{
+    color: white;
+}
 .container {
 
     display: flex;
@@ -186,12 +197,15 @@ img {
 
 .text-head {
     text-align: center;
-
+    width: 100%;
 }
 
 .text-body {
     font-size: 20px;
     line-height: 30px;
+
+    font-weight: bold;
+    
 }
 
 .title {
@@ -204,9 +218,11 @@ img {
 
 .title-one {
     font-size: 70px;
-    font-family: 'Aristotelica';
+   
+ 
     color: #640059;
-    font-weight: bold
+    font-weight: bold;
+    background-color: rgb(255, 255, 255,0.8);
 }
 
 .data-publi {
@@ -219,6 +235,11 @@ img {
     font-size: 10px;
     padding-left: 40%;
 }
+.fonts1 {
+    font-size: 14px;
+    padding-left: 40%;
+}
+
 
 .aspas {
     width: 90px;
@@ -658,7 +679,11 @@ nav {
 
 /* Aqui a mensagem ja está com o display none para já começar escondida*/
 .mensagem {
-
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
     background-color: rgb(204, 204, 204);
     display: none;
     position: absolute;
@@ -667,7 +692,7 @@ nav {
     left: 0;
     right: 0;
     margin: auto;
-    width: 199px;
+    width: 700px;
     height: 110px;
     color: rgb(0, 0, 0);
     border: 1px solid rgb(136, 136, 136);
@@ -782,10 +807,21 @@ nav {
 
 .img-lado {
     width: 50%;
-    height: 400px;
+    height: 360px;
     float: left;
+    padding-right: 10px;
 }
-
+.r{
+    height: 300px;
+}
+.img-py{
+    width: 400px;
+    padding-left: 25%;
+}
+.img-py1{
+    width: 700px;
+    padding-left: 5%;
+}
 .img-fim {
     height: 450px;
     width: 100%;
@@ -917,7 +953,7 @@ nav {
     .nav-list {
         position: absolute;
         left: 0;
-        top: -2.5vh;
+        top: -2.0vh;
         width: 10vw;
         height: 100vh;
         flex-direction: column;
@@ -961,4 +997,39 @@ nav {
         border-radius: 10px;
     }
 
+    .img-py1{
+        width: 100%;
+        height: 200px;
+        padding-left: 0px;
+    }
+    .img-py{
+        width: 100%;
+        height: 200px;
+        padding-left: 0px;
+    }
+    .img-pr{
+        width: 100%;
+        height: 200px;
+    }
+  
+ 
+    .img-g{
+        width: 100%;
+        height: 200px;
+        
+    }
+    .img-w{
+        width: 100%;
+        height: 200px;
+
+    }
+    
+.Afonte {
+
+    cursor: pointer;
+   
+   padding-left: 75%;
+   
+
+}
 }
