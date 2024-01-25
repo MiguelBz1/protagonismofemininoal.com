@@ -57,6 +57,12 @@ var swiper = new Swiper(".swiper", {
     keyboard: true,
 });
 
+const element = document.getElementById('video-texto');
+const element1 = document.getElementById('video-texto1');
+if(window.screen.width < 1200) {
+    element.classList.remove('box-img');
+     element1.classList.remove('box-text');
+}
 
 
 //mobile menu
@@ -73,9 +79,8 @@ function fundo(){
             teste-=1
       
             menu.style.paddingLeft = "290px"
-                 
-            menu1.addEventListener('click', function(){ back.style.display = 'none' });
-            back.addEventListener('click', function(){ back.style.display = 'none' });
+            back.style.display = 'none'
+           
          
           
         }
@@ -88,9 +93,8 @@ function fundo(){
             for (var i = 0; i < item.length; i++) {
                 item[i].addEventListener('click', function(){ back.style.display = 'none'});
             }
-            
-            menu1.addEventListener('click', function(){ back.style.display = 'block' });
-            back.addEventListener('click', function(){ back.style.display = 'none' });
+            back.style.display = 'block'
+           
          
           
           
@@ -105,15 +109,14 @@ function fundo(){
       menu.style.paddingLeft = menu.style.fontSize;
       menu.style.paddingRight = "0"
       menu.style.transition = "padding-Right 0.8s"; 
-           
-      menu1.addEventListener('click', function(){ back.style.display = 'none' });
-      back.addEventListener('click', function(){ back.style.display = 'none' });
+      back.style.display = 'none'
+
    
     
   }
   else{
       menu.style.paddingLeft = "0"
-      menu.style.paddingRight = "100px"
+      menu.style.paddingRight = "145px"
       console.log("sadsda")
       teste = teste+1
       menu.style.transition = "padding-Right 2s";    
@@ -121,10 +124,8 @@ function fundo(){
       for (var i = 0; i < item.length; i++) {
           item[i].addEventListener('click', function(){ back.style.display = 'none'});
       }
-      
-      menu1.addEventListener('click', function(){ back.style.display = 'block' });
-      back.addEventListener('click', function(){ back.style.display = 'none' });
-   
+      back.style.display = 'block'
+
     
     
   }
@@ -133,8 +134,10 @@ function fonte(e) {
 
     var elemento = $(".text-center");
     var elemento1 = $(".text-head");
+    var elemento2 = $(".text-body");
     var fonte = parseInt(elemento.css('font-size'));
     var fonte2 = parseInt(elemento1.css('font-size'));
+    var fonte3 = parseInt(elemento2.css('font-size'));
     var body = $("body");
     const fonteNormal = parseInt(body.css('font-size'));
 
@@ -159,8 +162,18 @@ function fonte(e) {
     if (e == 'n') {
         fonte2 = fonteNormal;
     }
-
     elemento1.css("fontSize", fonte2);
+    if (e == 'a') {
+        fonte3++;
+    }
+    if (e == 'd') {
+        fonte3--;
+    }
+    if (e == 'n') {
+        fonte3 = fonteNormal;
+    }
+
+    elemento2.css("fontSize", fonte3);
 }
 let contaudio = 0
 function playAudio() {
