@@ -1,741 +1,1452 @@
-class MobileNavbar {
-    constructor(mobileMenu, navList, navLinks) {
-        this.mobileMenu = document.querySelector(mobileMenu);
-        this.navList = document.querySelector(navList);
-        this.navLinks = document.querySelectorAll(navLinks);
-        this.activeClass = "active";
+body {
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0%;
 
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    animateLinks() {
-        this.navLinks.forEach((link, index) => {
-            link.style.animation
-                ? (link.style.animation = "")
-                : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3
-                    }s`);
-        });
-    }
-
-    handleClick() {
-        this.navList.classList.toggle(this.activeClass);
-        this.mobileMenu.classList.toggle(this.activeClass);
-        this.animateLinks();
-    }
-
-    addClickEvent() {
-        this.mobileMenu.addEventListener("click", this.handleClick);
-    }
-
-    init() {
-        if (this.mobileMenu) {
-            this.addClickEvent();
-        }
-        return this;
-    }
 }
 
-const mobileNavbar = new MobileNavbar(
-    ".mobile-menu",
-    ".nav-list",
-    ".nav-list li",
-);
-mobileNavbar.init();
-
-/* carrosel */
-
-var swiper = new Swiper(".swiper", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    keyboard: true,
-});
-
-const element = document.getElementById('video-texto');
-const element1 = document.getElementById('video-texto1');
-if(window.screen.width < 1200) {
-    element.classList.remove('box-img');
-     element1.classList.remove('box-text');
+.head-site {
+    background-image: url(Imgs/capa.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 250px;
 }
 
+.botao-centro {
+    text-align: center;
+}
 
-//mobile menu
-const menu = document.getElementById('mobile-menu');
-let   menu1 = document.getElementById('menu');
-let    back = document.getElementById('back');
-let item = document.getElementsByClassName('menu-item');
-let teste = 0 
-function fundo(){
-    if(window.screen.width < 1200) { // aqui você define o tamanho pra mobile
-        if(teste >=1){
-        
-        
-            teste-=1
-      
-            menu.style.paddingLeft = "290px"
-            back.style.display = 'none'
-           
-         
-          
-        }
-        else{
-            menu.style.paddingLeft = "90px"
-      
-            teste = teste+1
-            
-         
-            for (var i = 0; i < item.length; i++) {
-                item[i].addEventListener('click', function(){ back.style.display = 'none'});
-            }
-            back.style.display = 'block'
-           
-         
-          
-          
-        }
-    }
-    
+.botao {
+    border-radius: 10px;
+    background-color: #B948AB;
+    height: 40px;
 
-  else if(teste >=1){
-      
-      
-      teste-=1
-      menu.style.paddingLeft = menu.style.fontSize;
-      menu.style.paddingRight = "0"
-      menu.style.transition = "padding-Right 0.8s"; 
-      back.style.display = 'none'
+}
 
+.botao-flutuante {
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+
+    width: 50px;
+    height: 50px;
+    border: 1px solid #FD7D3F;
+    border-radius: 50%;
+    color: #FD7D3F;
+}
+
+.Afonte {
+
+    cursor: pointer;
+
+    padding-left: 90%;
+
+
+}
+
+.seta {
+    width: 20px;
+    height: 20px;
+}
+
+.img-pr {
+    height: 570px;
+}
+
+.box-img {
+    background-image: url(Wanessa-20240122T203201Z-001/Wanessa/IMG_6324.JPG);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+blockquote {
    
-    
-  }
-  else{
-      menu.style.paddingLeft = "0"
-      menu.style.paddingRight = "145px"
-      console.log("sadsda")
-      teste = teste+1
-      menu.style.transition = "padding-Right 2s";    
-   
-      for (var i = 0; i < item.length; i++) {
-          item[i].addEventListener('click', function(){ back.style.display = 'none'});
-      }
-      back.style.display = 'block'
-
-    
-    
-  }
-} 
-function fonte(e) {
-
-    var elemento = $(".text-center");
-    var elemento1 = $(".text-head");
-    var elemento2 = $(".text-body");
-    var fonte = parseInt(elemento.css('font-size'));
-    var fonte2 = parseInt(elemento1.css('font-size'));
-    var fonte3 = parseInt(elemento2.css('font-size'));
-    var body = $("body");
-    const fonteNormal = parseInt(body.css('font-size'));
-
-
-    if (e == 'a') {
-        fonte++;
-    }
-    if (e == 'd') {
-        fonte--;
-    }
-    if (e == 'n') {
-        fonte = fonteNormal;
-    }
-
-    elemento.css("fontSize", fonte);
-    if (e == 'a') {
-        fonte2++;
-    }
-    if (e == 'd') {
-        fonte2--;
-    }
-    if (e == 'n') {
-        fonte2 = fonteNormal;
-    }
-    elemento1.css("fontSize", fonte2);
-    if (e == 'a') {
-        fonte3++;
-    }
-    if (e == 'd') {
-        fonte3--;
-    }
-    if (e == 'n') {
-        fonte3 = fonteNormal;
-    }
-
-    elemento2.css("fontSize", fonte3);
+    height: 800px;
 }
-let contaudio = 0
-function playAudio() {
 
-    if (contaudio >= 1) {
-        let x = document.getElementById("myAudio");
-        x.pause();
-        contaudio -= 1
-    }
-    else {
-        let x = document.getElementById("myAudio");
-        x.play();
-        contaudio += 1
-    }
+.img-g {
+    height: 500px;
+
+}
+
+.img-w {
+    height: 400px;
+}
+
+.a1 {
+    color: white;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+#back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.box {
+    width: 60%;
 
 }
 
 
 
-var player = document.getElementById("myAudio");
-let progress = document.getElementById("progress");
-let playbtn = document.getElementById("playbtn");
-
-var playpause = function () {
-    if (player.paused) {
-        player.play();
-    } else {
-        player.pause();
-    }
-}
-
-playbtn.addEventListener("click", playpause);
-
-player.onplay = function () {
-    playbtn.classList.remove("fa-play");
-    playbtn.classList.add("fa-pause");
-}
-
-player.onpause = function () {
-    playbtn.classList.add("fa-play");
-    playbtn.classList.remove("fa-pause");
-}
-
-player.ontimeupdate = function () {
-    let ct = player.currentTime;
-    current1.innerHTML = timeFormat(ct);
-    //progress
-    let duration = player.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
-}
-
-function timeFormat(ct) {
-    minutes = Math.floor(ct / 60);
-    seconds = Math.floor(ct % 60);
-
-    if (seconds < 10) {
-        seconds = "0" + seconds;
-    }
-
-    return minutes + ":" + seconds;
-}
-
-/* GESSIKA2 */
-
-var GÉSSIKA2 = document.getElementById("GÉSSIKA2");
-let playbtn1 = document.getElementById("playbtn1");
-var playpause = function () {
-    if (GÉSSIKA2.paused) {
-        GÉSSIKA2.play();
-    } else {
-        GÉSSIKA2.pause();
-    }
-}
-
-playbtn1.addEventListener("click", playpause);
-
-GÉSSIKA2.onplay = function () {
-    playbtn1.classList.remove("fa-play");
-    playbtn1.classList.add("fa-pause");
-}
-
-GÉSSIKA2.onpause = function () {
-    playbtn1.classList.add("fa-play");
-    playbtn1.classList.remove("fa-pause");
-}
-
-GÉSSIKA2.ontimeupdate = function () {
-    let ct = GÉSSIKA2.currentTime;
-    current2.innerHTML = timeFormat(ct);
-    //progress
-    let duration = GÉSSIKA2.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
-}
-
-/* GESSIKA3 */
-
-var GÉSSIKA3 = document.getElementById("GÉSSIKA3");
-let playbtn3 = document.getElementById("playbtn3");
-var playpause = function () {
-    if (GÉSSIKA3.paused) {
-        GÉSSIKA3.play();
-    } else {
-        GÉSSIKA3.pause();
-    }
-}
-
-playbtn3.addEventListener("click", playpause);
-
-GÉSSIKA3.onplay = function () {
-    playbtn3.classList.remove("fa-play");
-    playbtn3.classList.add("fa-pause");
-}
-
-GÉSSIKA3.onpause = function () {
-    playbtn3.classList.add("fa-play");
-    playbtn3.classList.remove("fa-pause");
-}
-
-GÉSSIKA3.ontimeupdate = function () {
-    let ct = GÉSSIKA3.currentTime;
-    current3.innerHTML = timeFormat(ct);
-    //progress
-    let duration = GÉSSIKA3.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
-}
-
-/*Wanessa 1*/
-
-
-var playerW = document.getElementById("playerW");
-let playbtnW = document.getElementById("playbtnW");
-var playpause = function () {
-    if (playerW.paused) {
-        playerW.play();
-    } else {
-        playerW.pause();
-    }
-}
-
-playbtnW.addEventListener("click", playpause);
-
-playerW.onplay = function () {
-    playbtnW.classList.remove("fa-play");
-    playbtnW.classList.add("fa-pause");
-}
-
-playerW.onpause = function () {
-    playbtnW.classList.add("fa-play");
-    playbtnW.classList.remove("fa-pause");
-}
-
-playerW.ontimeupdate = function () {
-    let ct = playerW.currentTime;
-    currentW.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerW.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
-}
-/* Wanessa2 */
-var playerW1 = document.getElementById("playerW1");
-let playbtnW1 = document.getElementById("playbtnW1");
-var playpause = function () {
-    if (playerW1.paused) {
-        playerW1.play();
-    } else {
-        playerW1.pause();
-    }
-}
-
-playbtnW1.addEventListener("click", playpause);
-
-playerW1.onplay = function () {
-    playbtnW1.classList.remove("fa-play");
-    playbtnW1.classList.add("fa-pause");
-}
-
-playerW1.onpause = function () {
-    playbtnW1.classList.add("fa-play");
-    playbtnW1.classList.remove("fa-pause");
-}
-
-playerW1.ontimeupdate = function () {
-    let ct = playerW1.currentTime;
-    currentW1.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerW1.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
-}
-
-/* Priscila */
-var playerP = document.getElementById("playerP");
-let playbtnP = document.getElementById("playbtnP");
-var playpause = function () {
-    if (playerP.paused) {
-        playerP.play();
-    } else {
-        playerP.pause();
-    }
-}
-
-playbtnP.addEventListener("click", playpause);
-
-playerP.onplay = function () {
-    playbtnP.classList.remove("fa-play");
-    playbtnP.classList.add("fa-pause");
-}
-
-playerP.onpause = function () {
-    playbtnP.classList.add("fa-play");
-    playbtnP.classList.remove("fa-pause");
-}
-
-playerP.ontimeupdate = function () {
-    let ct = playerP.currentTime;
-    currentP.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerP.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
+.box-text {
+    background-color: white;
+    color: black;
+    width: 500px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding: 30px;
 }
 
 
-/* Priscila1 */
-var playerP1 = document.getElementById("playerP1");
-let playbtnP1 = document.getElementById("playbtnP1");
-var playpause = function () {
-    if (playerP1.paused) {
-        playerP1.play();
-    } else {
-        playerP1.pause();
-    }
+img {
+    width: 100%;
+    height: 500px;
 }
 
-playbtnP1.addEventListener("click", playpause);
 
-playerP1.onplay = function () {
-    playbtnP1.classList.remove("fa-play");
-    playbtnP1.classList.add("fa-pause");
+.img-style {
+    width: 400px;
+    height: 400px;
 }
 
-playerP1.onpause = function () {
-    playbtnP1.classList.add("fa-play");
-    playbtnP1.classList.remove("fa-pause");
+/* rodape*/
+.rodape {
+    padding-top: 30px;
+    color: white;
+    background-color: black;
 }
 
-playerP1.ontimeupdate = function () {
-    let ct = playerP1.currentTime;
-    currentP1.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerP1.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
-}
-/* Priscila2 */
-var playerP2 = document.getElementById("playerP2");
-let playbtnP2 = document.getElementById("playbtnP2");
-var playpause = function () {
-    if (playerP2.paused) {
-        playerP2.play();
-    } else {
-        playerP2.pause();
-    }
+.icon {
+    width: 50px;
+    height: 50px;
+    text-align: right;
 }
 
-playbtnP2.addEventListener("click", playpause);
-
-playerP2.onplay = function () {
-    playbtnP2.classList.remove("fa-play");
-    playbtnP2.classList.add("fa-pause");
+.icon-position {
+    text-align: right;
 }
 
-playerP2.onpause = function () {
-    playbtnP2.classList.add("fa-play");
-    playbtnP2.classList.remove("fa-pause");
+/*text*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url(Montserrat-Regular.otf);
+
 }
 
-playerP2.ontimeupdate = function () {
-    let ct = playerP2.currentTime;
-    currentP2.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerP2.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
+@font-face {
+    font-family: 'Aristotelica';
+    src: url(Zetafonts\ -\ Aristotelica\ Pro\ Text\ Extralight.otf);
+
 }
 
-/* Priscila3 */
-
-var playerP3 = document.getElementById("playerP3");
-let playbtnP3 = document.getElementById("playbtnP3");
-var playpause = function () {
-    if (playerP3.paused) {
-        playerP3.play();
-    } else {
-        playerP3.pause();
-    }
+.text-center {
+    font-family: 'Montserrat';
+    font-size: 17px;
+    text-align: justify;
+    line-height: 30px;
 }
 
-playbtnP3.addEventListener("click", playpause);
+.text-center-citacao {
+    font-family: 'Montserrat';
+    font-size: 17px;
+    text-align: justify;
+    line-height: 30px;
 
-playerP3.onplay = function () {
-    playbtnP3.classList.remove("fa-play");
-    playbtnP3.classList.add("fa-pause");
+    float: left;
+
+
 }
 
-playerP3.onpause = function () {
-    playbtnP3.classList.add("fa-play");
-    playbtnP3.classList.remove("fa-pause");
+.text-center-citacao1 {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    display: flex;
+    float: right;
+
 }
 
-playerP3.ontimeupdate = function () {
-    let ct = playerP3.currentTime;
-    currentP3.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerP3.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
+.text-center-citacao2 {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 30px;
+    font-style: italic;
+    font-weight: bold;
 }
 
-/* Raissa */
+.body-site {
+    padding-top: 20px;
+    padding-bottom: 10px;
 
-var playerR = document.getElementById("playerR");
-let playbtnR = document.getElementById("playbtnR");
-var playpause = function () {
-    if (playerR.paused) {
-        playerR.play();
-    } else {
-        playerR.pause();
-    }
 }
 
-playbtnR.addEventListener("click", playpause);
 
-playerR.onplay = function () {
-    playbtnR.classList.remove("fa-play");
-    playbtnR.classList.add("fa-pause");
+.text-head {
+    text-align: center;
+    width: 100%;
 }
 
-playerR.onpause = function () {
-    playbtnR.classList.add("fa-play");
-    playbtnR.classList.remove("fa-pause");
+.text-body {
+    font-size: 20px;
+    line-height: 30px;
+
+    font-weight: bold;
+
 }
 
-playerR.ontimeupdate = function () {
-    let ct = playerR.currentTime;
-    currentR.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerR.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
+.title {
+    font-size: 50px;
+    font-family: 'Aristotelica';
+    color: #640059;
+    font-weight: bold;
+    padding-top: 20px;
 }
 
-/* Raissa 1 */
+.title-one {
+    font-size: 70px;
 
-var playerR1 = document.getElementById("playerR1");
-let playbtnR1 = document.getElementById("playbtnR1");
-var playpause = function () {
-    if (playerR1.paused) {
-        playerR1.play();
-    } else {
-        playerR1.pause();
-    }
+
+    color: #640059;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255, 0.8);
 }
 
-playbtnR1.addEventListener("click", playpause);
-
-playerR1.onplay = function () {
-    playbtnR1.classList.remove("fa-play");
-    playbtnR1.classList.add("fa-pause");
+.data-publi {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-playerR1.onpause = function () {
-    playbtnR1.classList.add("fa-play");
-    playbtnR1.classList.remove("fa-pause");
+.fonts {
+    font-size: 12px;
+    padding-left: 40%;
 }
 
-playerR1.ontimeupdate = function () {
-    let ct = playerR1.currentTime;
-    currentR1.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerR1.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
+.fonts1 {
+    font-size: 14px;
+
+}
+
+.fonts2 {
+    font-size: 14px;
+    padding-left: 5%;
+}
+
+.aspas {
+    width: 90px;
+    height: 50px;
+
+}
+
+.aspas1 {
+    width: 90px;
+    height: 50px;
+    float: right;
+    text-align: left;
+    padding-right: 11%;
+}
+
+/* Audio */
+.audio-box {
+    width: 100%;
+    height: 150px;
+    background-color: rgba(242, 242, 242, 255);
+
+    border-radius: 20px;
+    display: flex;
+
+}
+
+.img-audio {
+    width: 160px;
+    height: 140px;
+    padding: 4px;
+    border-radius: 20px;
+    float: left;
+}
+
+.a {
+    padding-left: 10px;
+    flex-direction: column;
+    float: left;
+    text-align: left;
+
+}
+
+.teste {
+    font-size: 20px;
+}
+
+audio {
+    width: 550px;
+    float: right;
+    padding-right: 50px;
+
+}
+
+.player {
+    width: 640px;
+
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    grid-gap: 16px;
+
+    position: relative;
+    border-radius: 64px;
+}
+
+.control,
+#current {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 20px;
+}
+
+.control {
+
+    padding-left: 260px
+}
+
+#playbtn {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#playbtn1 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#playbtn3 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+/* WANESSA*/
+#playbtnW {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#playbtnW1 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+/* PRISCILA*/
+#playbtnP {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+/* PRISCILA 1*/
+#playbtnP1 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#playbtnP1:hover {
+    background-color: rgba(242, 242, 242, 255);
+}
+
+/* PRISCILA 2*/
+#playbtnP2 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+/* PRISCILA 3*/
+#playbtnP3 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+/* Raissa*/
+#playbtnR {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+/* Raissa 1*/
+#playbtnR1 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
 /* Raissa 2*/
-
-var playerR2 = document.getElementById("playerR2");
-let playbtnR2 = document.getElementById("playbtnR2");
-var playpause = function () {
-    if (playerR2.paused) {
-        playerR2.play();
-    } else {
-        playerR2.pause();
-    }
+#playbtnR2 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
-playbtnR2.addEventListener("click", playpause);
-
-playerR.onplay = function () {
-    playbtnR2.classList.remove("fa-play");
-    playbtnR.classList.add("fa-pause");
+/* Licia */
+#playbtnL {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
-playerR2.onpause = function () {
-    playbtnR2.classList.add("fa-play");
-    playbtnR2.classList.remove("fa-pause");
-}
-
-playerR2.ontimeupdate = function () {
-    let ct = playerR2.currentTime;
-    currentR2.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerR2.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
-}
-
-/* Licia*/
-
-var playerL = document.getElementById("playerL");
-let playbtnL = document.getElementById("playbtnL");
-var playpause = function () {
-    if (playerL.paused) {
-        playerL.play();
-    } else {
-        playerL.pause();
-    }
-}
-
-playbtnL.addEventListener("click", playpause);
-
-playerL.onplay = function () {
-    playbtnL.classList.remove("fa-play");
-    playbtnL.classList.add("fa-pause");
-}
-
-playerL.onpause = function () {
-    playbtnL.classList.add("fa-play");
-    playbtnL.classList.remove("fa-pause");
-}
-
-playerL.ontimeupdate = function () {
-    let ct = playerL.currentTime;
-    currentL.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerL.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
-}
-
-/* Licia1*/
-
-var playerL1 = document.getElementById("playerL1");
-let playbtnL1 = document.getElementById("playbtnL1");
-var playpause = function () {
-    if (playerL1.paused) {
-        playerL1.play();
-    } else {
-        playerL1.pause();
-    }
-}
-
-playbtnL1.addEventListener("click", playpause);
-
-playerL1.onplay = function () {
-    playbtnL1.classList.remove("fa-play");
-    playbtnL1.classList.add("fa-pause");
-}
-
-playerL1.onpause = function () {
-    playbtnL1.classList.add("fa-play");
-    playbtnL1.classList.remove("fa-pause");
-}
-
-playerL1.ontimeupdate = function () {
-    let ct = playerL1.currentTime;
-    currentL1.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerL1.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
+/* Licia1 */
+#playbtnL1 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
 /* Polyana*/
-
-var playerPy = document.getElementById("playerPy");
-let playbtnPy = document.getElementById("playbtnPy");
-var playpause = function () {
-    if (playerPy.paused) {
-        playerPy.play();
-    } else {
-        playerPy.pause();
-    }
-}
-
-playbtnPy.addEventListener("click", playpause);
-
-playerPy.onplay = function () {
-    playbtnPy.classList.remove("fa-play");
-    playbtnPy.classList.add("fa-pause");
-}
-
-playerPy.onpause = function () {
-    playbtnPy.classList.add("fa-play");
-    playbtnPy.classList.remove("fa-pause");
-}
-
-playerPy.ontimeupdate = function () {
-    let ct = playerPy.currentTime;
-    currentPy.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerPy.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
+#playbtnPy {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
 /* Polyana 1*/
+#playbtnPy1 {
+    font-size: 24px;
+    float: left;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #640059;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 10px;
+}
 
-var playerPy1 = document.getElementById("playerPy1");
-let playbtnPy1 = document.getElementById("playbtnPy1");
-var playpause = function () {
-    if (playerPy1.paused) {
-        playerPy1.play();
-    } else {
-        playerPy1.pause();
+.control {
+
+    padding-left: 260px
+}
+
+.current-class {
+    text-align: right;
+    padding-right: 350px;
+
+}
+
+
+
+#progress {
+    display: block;
+    width: var(--progress, 0%);
+    background-color: rgb(255, 0, 0);
+    transition: all 1s linear;
+    height: 100%;
+}
+
+.audiobody {
+    min-height: 100vh;
+    padding-top: 20px;
+
+    color: #B948AB;
+}
+
+.botao-audio {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #0059be;
+    border: 1px solid #000000;
+
+}
+
+
+
+.img-botao {
+    width: 28px;
+    height: 25px;
+
+}
+
+.marquee {
+    padding-top: 40px;
+    font-family: "Montserrat";
+    font-weight: bold
+}
+
+.subtitulo {
+    padding-top: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: rgba(242, 242, 242, 255);
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: rgba(242, 242, 242, 255);
+    border-radius: 50%;
+    display: none;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    background-color: rgba(242, 242, 242, 255);
+    display: none;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    background-color: rgba(242, 242, 242, 255);
+    display: none;
+
+}
+
+audio::-webkit-media-controls-timeline {
+    border-radius: 40px;
+    background-color: rgba(242, 242, 242, 255);
+
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: rgba(242, 242, 242, 255);
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+
+audio::-webkit-media-controls-mute-button {
+    background-color: rgba(242, 242, 242, 255);
+    border-radius: 50%;
+
+}
+
+video {
+    padding-left: 30%;
+   
+    height: 500px;
+    
+}
+
+/*nav bar*/
+.a-navbar {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+}
+
+.li-menu {
+    padding-top: 35px;
+padding-left:50px;
+
+}
+
+.li-menu1 {
+    padding-top: 10px;
+    padding-left:50px;
+}
+
+.logo {
+    text-align: center;
+    padding-right: 40%;
+    font-size: 20px;
+
+}
+
+
+nav {
+
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 67px;
+
+}
+
+.nav-list {
+    position: absolute;
+    left: 0;
+    top: -2.5vh;
+    width: 6vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: #B948AB;
+    display: flex;
+
+    list-style: none;
+    transform: translate(-100%);
+    transition: transform 0.4s ease-in;
+
+
+}
+
+#button1 {
+    position: absolute;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 7%;
+
+}
+
+#button2 {
+    position: absolute;
+    text-decoration: none;
+    width: 400px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 20%;
+
+}
+#button3 {
+    position: absolute;
+    text-decoration: none;
+    width: 400px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button4 {
+    position: absolute;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button5 {
+    position: absolute;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button6{
+    position: absolute;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+  
+
+}
+#button7{
+    position: absolute;
+    text-decoration: none;
+    width: 400px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 15%;
+
+}
+.link:link {
+    color:#640059;
+    text-decoration:none;
+  }
+  .link:visited {
+    color: #B948AB;
+    text-decoration:none;
+  }
+  .link:hover {
+    color: #FD7D3F;
+    text-decoration:underline;
+  }
+  .link:active {
+    color:#00ff00;
+    text-decoration:underline;
+    background-color:#000000;
+  }
+
+.descricao {
+    display: none;
+}
+
+.item:hover .descricao {
+    display: block;
+    border: 4px solid blue;
+}
+
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:450px;
+    height: 150px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    /*Caso queira, por exemplo que fique ao lado 
+  é so mudar o top para 0 e o left ou o right setar com 100%
+    top:0;
+    left:100%;
+    right:0;
+    margin: auto;
+    width:100px;
+    height:20px;
+    border:1px solid red;
+  
+  */
+}
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem3 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height: 170px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    /*Caso queira, por exemplo que fique ao lado 
+  é so mudar o top para 0 e o left ou o right setar com 100%
+    top:0;
+    left:100%;
+    right:0;
+    margin: auto;
+    width:100px;
+    height:20px;
+    border:1px solid red;
+  
+  */
+}
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem2 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height: 170px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    /*Caso queira, por exemplo que fique ao lado 
+  é so mudar o top para 0 e o left ou o right setar com 100%
+    top:0;
+    left:100%;
+    right:0;
+    margin: auto;
+    width:100px;
+    height:20px;
+    border:1px solid red;
+  
+  */
+}
+.mensagem4 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height: 100px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    
+}
+.mensagem5 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:600px;
+    height: 120px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    
+}
+
+.mensagem6 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:300px;
+    height: 170px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    
+}
+.nav-list li {
+    font-family: 'Montserrat';
+    margin-right: 100%;
+    padding-right: 20px;
+    font-size: 15px;
+
+}
+
+.mobile-menu {
+    cursor: pointer;
+    display: block;
+    margin-right: 10%;
+    width: 52px;
+    padding-left: 80px;
+  
+    
+}
+
+.line {
+    transform: translate(-20%);
+    width: 110px;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    margin: 8px;
+    color: #B948AB;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #1d00c4;
+    margin: 8px;
+}
+
+.menu {
+    padding-left: 85px;
+    align-items: center;
+  
+    padding-left:50px;
+}
+
+.text-menu {
+    padding-left: 36px;
+    color: #0059be;
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+
+/*carrosel */
+
+
+.main-slide {
+    max-width: 800px;
+    display: flex;
+    align-content: end;
+    justify-content: right;
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+
+
+.img-s {
+    width: 100%;
+    height: 400px;
+    transition-duration: 1000ms;
+    border-radius: 10px;
+}
+
+.swiper-button-next {
+    transition-duration: 1000ms;
+}
+
+.leganda-carrosel {
+    position: absolute;
+    color: #000000;
+    font-size: 18px;
+    bottom: 2px;
+    background-color: rgb(255, 255, 255, 0.7);
+    width: 93%;
+    height: 30px;
+    text-align: center;
+    padding-left: 7%;
+    transition: transform 0.5s ease-in;
+    font-family: 'Montserrat';
+    padding-top: 8px;
+
+}
+.leganda-carrosel1 {
+    position: absolute;
+
+    color: #000000;
+    font-size: 18px;
+    bottom: 2px;
+    background-color: rgb(255, 255, 255, 0.7);
+    width: 93%;
+    height: 60px;
+    text-align: center;
+    padding-left: 7%;
+    transition: transform 0.5s ease-in;
+    font-family: 'Montserrat';
+    padding-top: 8px;
+
+}
+.pos-carrosel {
+    font-size: 10px;
+    color: white;
+}
+
+.img-lado {
+    width: 50%;
+    height: 360px;
+    float: left;
+    padding-right: 10px;
+}
+
+.r {
+    height: 300px;
+}
+
+.img-py {
+    width: 400px;
+    padding-left: 25%;
+}
+
+.img-py1 {
+    width: 700px;
+    padding-left: 5%;
+}
+
+.img-fim {
+    height: 450px;
+    width: 100%;
+}
+.ico{
+    width: 50px;
+    height: 50px;
+    padding-right: 90px;
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .titulo {
+        font-size: 10px;
     }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .title1 {
+        font-size: 10px;
+    }
+
+    .title-one {
+        font-size: 40px;
+    }
+
+    .text-body {
+        font-size: 15px;
+    }
+
+    .box {
+        width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .audio-box {
+        flex-direction: column;
+        height: 350px;
+        width: 100%;
+        height: 300px;
+    }
+
+    audio {
+        width: 90%;
+    }
+
+    .text-center {
+        font-size: 10px;
+    }
+
+    .text-center-citacao {
+        font-size: 10px;
+
+
+    }
+
+    .text-center-citacao1 {
+        font-size: 10px;
+
+    }
+
+    .text-center-citacao2 {
+        font-size: 10px;
+
+    }
+
+    .body-site {
+        font-size: 10px;
+
+
+    }
+
+
+    .text-head {
+        text-align: center;
+
+    }
+
+
+
+    .li-menu {
+    
+    padding-left:10px;
+    
+    }
+    
+    .li-menu1 {
+        padding-top: 10px;
+        padding-left:10px;
+    }
+    .menu {
+      
+        align-items: center;
+      
+        padding-left:20px;
+    }
+
+    .img-audio {
+        width: 160px;
+        height: 140px;
+
+    }
+
+    .box-text {
+        background-color: white;
+        color: black;
+        width: 300px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding: 10px;
+    }
+
+    .control {
+
+        display: none;
+
+        padding-left: 0px
+    }
+
+    .current-class {
+        padding-right: 0px;
+    }
+
+    .control,
+    #current {
+        height: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 20px;
+    }
+
+    .mobile-menu {
+
+        
+        padding-right: 280px;
+    }
+
+
+    .menu {
+        padding-left: 290px;
+
+    }
+   
+    .nav-list {
+        position: absolute;
+        left: 0;
+        top: -2.0vh;
+        width: 10vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        background-color: #B948AB;
+        padding-left: 60px;
+        display: flex;
+        list-style: none;
+        transform: translate(-100%);
+        transition: transform 0.4s ease-in;
+
+
+    }
+
+    .main-slide {
+        padding-right: 20px;
+        padding-left: 20px;
+
+
+    }
+
+    .leganda-carrosel {
+        position: absolute;
+        color: #000000;
+        font-size: 10px;
+        bottom: 2px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 93%;
+        height: 30px;
+        text-align: center;
+        padding-left: 7%;
+        transition: transform 0.5s ease-in;
+        font-family: 'Montserrat';
+        padding-top: 8px;
+    }
+
+    .leganda-carrosel1 {
+        position: absolute;
+        color: #000000;
+        font-size: 10px;
+        bottom: 2px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 93%;
+        height: 30px;
+        text-align: center;
+        padding-left: 7%;
+        transition: transform 0.5s ease-in;
+        font-family: 'Montserrat';
+        padding-top: 8px;
+    }
+    .img-s {
+        width: 100%;
+        height: 300px;
+        transition-duration: 1000ms;
+        border-radius: 10px;
+    }
+
+    .img-py1 {
+        width: 100%;
+        height: 250px;
+        padding-left: 0px;
+    }
+
+    .img-py {
+        width: 100%;
+        height: 400px;
+        padding-left: 0px;
+    }
+
+    .img-pr {
+        width: 100%;
+        height: 240px;
+    }
+
+    .img-ra {
+        width: 100%;
+        height: 240px;
+    }
+
+    .img-g {
+        width: 100%;
+        height: 200px;
+
+    }
+
+    .img-w {
+        width: 100%;
+        height: 250px;
+
+    }
+
+    .img-p {
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .img-lado {
+        height: 300px;
+    }
+    .img-fim{
+        height: 250px;
+        width: 100%;
+    }
+    .Afonte {
+
+        cursor: pointer;
+
+        padding-left: 65%;
+
+
+    }
+    
+.head-site {
+    padding-bottom: 0px;
+    background-size: 110%;
+    padding-top: 0px;
 }
 
-playbtnPy1.addEventListener("click", playpause);
+.mensagem {
+   
+    width:250px;
+    height: 190px;
+  
 
-playerPy1.onplay = function () {
-    playbtnPy1.classList.remove("fa-play");
-    playbtnPy1.classList.add("fa-pause");
+}
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem3 {
+    width:250px;
+    height: 200px;
+  
+}
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem2 {
+    width:250px;
+    height: 200px;
+  
 }
 
-playerPy1.onpause = function () {
-    playbtnPy1.classList.add("fa-play");
-    playbtnPy1.classList.remove("fa-pause");
+.mensagem5 {
+    width:250px;
+    height: 300px;
+  
+
+    
+}
+#button1 {
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 7%;
+
 }
 
-playerPy1.ontimeupdate = function () {
-    let ct = playerPy1.currentTime;
-    currentPy1.innerHTML = timeFormat(ct);
-    //progress
-    let duration = playerPy1.duration;
-    prog = Math.floor((ct * 150) / duration);
-    progress.style.setProperty("--progress", prog + "%");
+#button2 {
+    position: absolute;
+    text-decoration: none;
+    width:200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 20%;
+
+}
+#button3 {
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button4 {
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button5 {
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button6{
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+  
+
+}
+#button7{
+    position: absolute;
+    text-decoration: none;
+    width:200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 15%;
+
 }
 
-
-let mensagem = document.querySelector(".mensagem") ;
-
-// mostra a mensagem
-function showMessage(){   
-   mensagem.style.display = "block";   
- }
-// esconde a mensagem
-function hideMessage(){
-  mensagem.style.display = "none"; 
 }
