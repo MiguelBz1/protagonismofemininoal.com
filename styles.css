@@ -67,6 +67,10 @@ body {
     padding-top: 60px;
     padding-bottom: 100px;
 }
+blockquote {
+   
+    height: 800px;
+}
 
 .img-g {
     height: 500px;
@@ -675,10 +679,94 @@ nav {
     height: 30px;
     background-color: transparent;
     border: none;
-    color: #0059be;
+    color: #ff00e1;
     padding-right: 7%;
 
 }
+
+#button2 {
+    position: absolute;
+    text-decoration: none;
+    width: 400px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 20%;
+
+}
+#button3 {
+    position: absolute;
+    text-decoration: none;
+    width: 400px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button4 {
+    position: absolute;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button5 {
+    position: absolute;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button6{
+    position: absolute;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+  
+
+}
+#button7{
+    position: absolute;
+    text-decoration: none;
+    width: 400px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 15%;
+
+}
+.link:link {
+    color:#640059;
+    text-decoration:none;
+  }
+  .link:visited {
+    color: #B948AB;
+    text-decoration:none;
+  }
+  .link:hover {
+    color: #FD7D3F;
+    text-decoration:underline;
+  }
+  .link:active {
+    color:#00ff00;
+    text-decoration:underline;
+    background-color:#000000;
+  }
 
 .descricao {
     display: none;
@@ -696,7 +784,7 @@ nav {
     font-family: "Montserrat";
     text-align: justify;
     padding: 10px;
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(204, 204, 204,0.9);
     display: none;
     position: absolute;
     top: 100%;
@@ -704,8 +792,8 @@ nav {
     left: 0;
     right: 0;
     margin: auto;
-    width: 700px;
-    height: 110px;
+    width:450px;
+    height: 150px;
     color: rgb(0, 0, 0);
     border: 1px solid rgb(136, 136, 136);
 
@@ -721,7 +809,134 @@ nav {
   
   */
 }
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem3 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height: 170px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
 
+    /*Caso queira, por exemplo que fique ao lado 
+  é so mudar o top para 0 e o left ou o right setar com 100%
+    top:0;
+    left:100%;
+    right:0;
+    margin: auto;
+    width:100px;
+    height:20px;
+    border:1px solid red;
+  
+  */
+}
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem2 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height: 170px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    /*Caso queira, por exemplo que fique ao lado 
+  é so mudar o top para 0 e o left ou o right setar com 100%
+    top:0;
+    left:100%;
+    right:0;
+    margin: auto;
+    width:100px;
+    height:20px;
+    border:1px solid red;
+  
+  */
+}
+.mensagem4 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:100%;
+    height: 100px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    
+}
+.mensagem5 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:600px;
+    height: 120px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    
+}
+
+.mensagem6 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:300px;
+    height: 170px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    
+}
 .nav-list li {
     font-family: 'Montserrat';
     margin-right: 100%;
@@ -813,7 +1028,22 @@ nav {
     padding-top: 8px;
 
 }
+.leganda-carrosel1 {
+    position: absolute;
 
+    color: #000000;
+    font-size: 18px;
+    bottom: 2px;
+    background-color: rgb(255, 255, 255, 0.7);
+    width: 93%;
+    height: 60px;
+    text-align: center;
+    padding-left: 7%;
+    transition: transform 0.5s ease-in;
+    font-family: 'Montserrat';
+    padding-top: 8px;
+
+}
 .pos-carrosel {
     font-size: 10px;
     color: white;
@@ -1030,6 +1260,20 @@ nav {
         padding-top: 8px;
     }
 
+    .leganda-carrosel1 {
+        position: absolute;
+        color: #000000;
+        font-size: 10px;
+        bottom: 2px;
+        background-color: rgb(255, 255, 255, 0.7);
+        width: 93%;
+        height: 30px;
+        text-align: center;
+        padding-left: 7%;
+        transition: transform 0.5s ease-in;
+        font-family: 'Montserrat';
+        padding-top: 8px;
+    }
     .img-s {
         width: 100%;
         height: 300px;
@@ -1088,15 +1332,121 @@ nav {
 
         cursor: pointer;
 
-        padding-left: 75%;
+        padding-left: 65%;
 
 
     }
     
 .head-site {
     padding-bottom: 0px;
-    background-size: 100%;
+    background-size: 110%;
     padding-top: 0px;
+}
+
+.mensagem {
+   
+    width:250px;
+    height: 190px;
+  
+
+}
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem3 {
+    width:250px;
+    height: 200px;
+  
+}
+/* Aqui a mensagem ja está com o display none para já começar escondida*/
+.mensagem2 {
+    width:250px;
+    height: 200px;
+  
+}
+
+.mensagem5 {
+    width:250px;
+    height: 300px;
+  
+
+    
+}
+#button1 {
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 7%;
+
+}
+
+#button2 {
+    position: absolute;
+    text-decoration: none;
+    width:200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 20%;
+
+}
+#button3 {
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button4 {
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button5 {
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 10%;
+
+}
+#button6{
+    position: absolute;
+    text-decoration: none;
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+  
+
+}
+#button7{
+    position: absolute;
+    text-decoration: none;
+    width:200px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ff00e1;
+    padding-right: 15%;
+
 }
 
 }
