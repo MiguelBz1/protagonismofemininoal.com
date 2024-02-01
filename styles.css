@@ -1703,3 +1703,9 @@ nav {
     
     
 
+@media screen and ( min-width: 1524px)   {
+ .box{
+
+width: 45%;
+ }
+}
