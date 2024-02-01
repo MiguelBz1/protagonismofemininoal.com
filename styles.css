@@ -1703,10 +1703,9 @@ nav {
     
     
 
-@media screen and (max-width:
-1024px) {
+@media screen and ( max-width: 1200px)  and( max-width: 2900px) {
  .box{
 
-width: 40%;
+width: 90%;
  }
 }
