@@ -1214,7 +1214,7 @@ nav {
 }
 
 .img-fim {
-    height: 550px;
+    height: 650px;
     width: 100%;
   
 }
@@ -1694,5 +1694,15 @@ nav {
 
     
 }
+
+}
+
+@media screen and (max-width: 1700px) {
+    .box {
+        width: 50%;
+    
+    }
+    
+    
 
 }
