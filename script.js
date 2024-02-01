@@ -840,3 +840,11 @@
     function hideMessage6(){
     mensagem6.style.display = "none"; 
     }
+    let mensagem8 = document.querySelector(".mensagem8") ;
+    function showMessage8(){   
+        mensagem8.style.display = "block";   
+        }
+        // esconde a mensagem
+        function hideMessage8(){
+        mensagem8.style.display = "none"; 
+        }
