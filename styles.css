@@ -6,14 +6,9 @@ body {
 }
 
 .head-site {
-    background-image: url(Imgs/IlustraçãoTCC4.png);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size:100%;
-    background-attachment: fixed;
-    color: white;
-    padding-top: 200px;
-    padding-bottom: 450px;
+  width: 100%;
+  height: 100%;
+   
 }
 
 .botao-centro {
@@ -194,7 +189,7 @@ blockquote {
     padding-left: 30px;
     padding-top: 20px;
     padding-right: 30px;
-    height: 790px;
+    
     padding: 30px;
 }
 .box-text4{
@@ -204,7 +199,6 @@ blockquote {
     padding-left: 30px;
     padding-top: 20px;
     padding-right: 30px;
-
     padding: 30px;
 }
 .box-text5{
@@ -809,7 +803,7 @@ nav {
     background-color: transparent;
     border: none;
     color: #9400d3;
-    padding-right: 13%;
+    padding-right: 9%;
     font-size: "Montserrat";
 }
 #button4 {
@@ -820,7 +814,7 @@ nav {
     background-color: transparent;
     border: none;
     color: #9400d3;
-    padding-right: 11%;
+    padding-right: 7%;
     font-size: "Montserrat";
 }
 #button5 {
@@ -831,7 +825,7 @@ nav {
     background-color: transparent;
     border: none;
     color: #9400d3;
-    padding-right: 13%;
+    padding-right: 10%;
     font-size: "Montserrat";
 
 }
@@ -843,7 +837,7 @@ nav {
     background-color: transparent;
     border: none;
     color: #9400d3;
-    padding-right: 13%;
+    padding-right: 10%;
     font-size: "Montserrat";
 
 }
@@ -855,7 +849,7 @@ nav {
     background-color: transparent;
     border: none;
     color: #9400d3;
-    padding-right: 16%;
+    padding-right: 13%;
     font-size: "Montserrat";
 
 }
@@ -867,7 +861,7 @@ nav {
     background-color: transparent;
     border: none;
     color: #9400d3;
-    padding-right: 20%;
+    padding-right: 15%;
     font-size: "Montserrat";
 
 }
@@ -1220,9 +1214,13 @@ nav {
 }
 
 .img-fim {
-    height: 450px;
+    height: 550px;
     width: 100%;
   
+}
+.img-r1{
+    height: 300px;
+    width: 100%;
 }
 .ico{
     width: 50px;
