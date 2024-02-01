@@ -6,14 +6,14 @@ body {
 }
 
 .head-site {
-    background-image: url(Imgs/capa.png);
+    background-image: url(Imgs/IlustraçãoTCC4.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size:100%;
     background-attachment: fixed;
     color: white;
     padding-top: 200px;
-    padding-bottom: 250px;
+    padding-bottom: 450px;
 }
 
 .botao-centro {
@@ -184,7 +184,7 @@ blockquote {
     padding-left: 30px;
     padding-top: 20px;
     padding-right: 30px;
-    height: 709px;
+    height: 720px;
     padding: 30px;
 }
 .box-text3{
@@ -383,6 +383,9 @@ img {
     border-radius: 20px;
     display: flex;
 
+}
+.audio1{
+    width: 50px;
 }
 
 .img-audio {
@@ -790,7 +793,7 @@ nav {
 #button2 {
     position: absolute;
     text-decoration: none;
-    width: 400px;
+    width: 500px;
     height: 30px;
     background-color: transparent;
     border: none;
@@ -853,6 +856,18 @@ nav {
     border: none;
     color: #9400d3;
     padding-right: 16%;
+    font-size: "Montserrat";
+
+}
+#button8{
+    position: absolute;
+    text-decoration: none;
+    width: 600px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #9400d3;
+    padding-right: 20%;
     font-size: "Montserrat";
 
 }
@@ -1043,6 +1058,27 @@ nav {
 
     
 }
+.mensagem8 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:600px;
+    height: 200px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    
+}
 .nav-list li {
     font-family: 'Montserrat';
     margin-right: 100%;
@@ -1073,7 +1109,7 @@ nav {
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background-color: #969696;
+    background-color: #000000;
     margin: 8px;
 }
 
@@ -1086,7 +1122,7 @@ nav {
 
 .text-menu {
     padding-left: 36px;
-    color: #969696;
+    color: #000000;
 }
 
 .nav-list.active {
@@ -1161,6 +1197,13 @@ nav {
     float: left;
     padding-right: 10px;
 }
+.img-lado1 {
+    width: 50%;
+    height: 590px;
+    float: left;
+    padding-top: 8px;
+    padding-right: 10px;
+}
 
 .r {
     height: 300px;
@@ -1179,6 +1222,7 @@ nav {
 .img-fim {
     height: 450px;
     width: 100%;
+  
 }
 .ico{
     width: 50px;
@@ -1483,6 +1527,9 @@ nav {
     .img-lado {
         height: 300px;
     }
+    .img-lado1 {
+        height: 300px;
+    }
     .img-fim{
         height: 250px;
         width: 100%;
@@ -1497,29 +1544,38 @@ nav {
     }
     
 .head-site {
-    padding-bottom: 0px;
-    background-size: 110%;
+    padding-bottom: 240px;
+    background-size: 100%;
     padding-top: 0px;
 }
+.img-cW{
+    height: 280px;
 
+}
 .mensagem {
    
     width:250px;
-    height: 190px;
+    height: 280px;
   
 
 }
 /* Aqui a mensagem ja está com o display none para já começar escondida*/
 .mensagem3 {
-    width:250px;
-    height: 200px;
+    width:300px;
+    height: 230px;
   
 }
 /* Aqui a mensagem ja está com o display none para já começar escondida*/
 .mensagem2 {
     width:250px;
-    height: 200px;
+    height: 290px;
   
+}.mensagem4 {
+    width:250px;
+    height: 120px;
+  
+
+    
 }
 
 .mensagem5 {
@@ -1544,18 +1600,18 @@ nav {
 #button2 {
     position: absolute;
     text-decoration: none;
-    width:200px;
-    height: 30px;
+    width:400px;
+    height: 50px;
     background-color: transparent;
     border: none;
     color: #ff00e1;
-    padding-right: 20%;
+    padding-right: 55%;
 
 }
 #button3 {
     position: absolute;
     text-decoration: none;
-    width: 200px;
+    width: 300px;
     height: 30px;
     background-color: transparent;
     border: none;
@@ -1577,7 +1633,7 @@ nav {
 #button5 {
     position: absolute;
     text-decoration: none;
-    width: 200px;
+    width: 300px;
     height: 30px;
     background-color: transparent;
     border: none;
@@ -1599,13 +1655,46 @@ nav {
 #button7{
     position: absolute;
     text-decoration: none;
-    width:200px;
+    width:300px;
     height: 30px;
     background-color: transparent;
     border: none;
     color: #ff00e1;
-    padding-right: 15%;
+    padding-right: 35%;
 
+}
+#button8{
+    position: absolute;
+    text-decoration: none;
+    width: 400px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #9400d3;
+    padding-right:6%;
+    font-size: "Montserrat";
+
+}
+.mensagem8 {
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(204, 204, 204,0.9);
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Usei % para que voce entenda que da para se adaptar com o tamanho do botão/container ou qualquer outra coisa a qual a mensagem esta relacionada*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:350px;
+    height: 360px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(136, 136, 136);
+
+    
 }
 
 }
