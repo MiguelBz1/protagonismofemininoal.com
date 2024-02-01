@@ -86,8 +86,8 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     color: white;
-    padding-top: 60px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 70px;
 }
 .box-img4 {
     background-image: url(Géssika-20240122T203149Z-001/Géssika/IMG_5918.JPG);
@@ -189,7 +189,7 @@ blockquote {
     padding-left: 30px;
     padding-top: 20px;
     padding-right: 30px;
-    
+   
     padding: 30px;
 }
 .box-text4{
@@ -737,7 +737,7 @@ padding-left:50px;
     padding-top: 15px;
     padding-left:50px;
 }
-}
+
 
 .logo {
     text-align: center;
@@ -1703,4 +1703,10 @@ nav {
     
     
 
+@media screen and (max-width:
+1224px) {
+ .box{
 
+width: 40%;
+ }
+}
